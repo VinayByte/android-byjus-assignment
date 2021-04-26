@@ -11,5 +11,8 @@ import org.threeten.bp.format.DateTimeFormatter
  * vinay6kr@gmail.com
  */
 object Utils {
-
+    fun getFormattedDate(dateString: String): String {
+        val date = LocalDate.parse(dateString, DateTimeFormatter.ISO_ZONED_DATE_TIME)
+        return date.toString()
+    }
 }
